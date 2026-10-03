@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Pensá una pregunta y revelá una respuesta: sí, no o todavía no."
+  >
+
+  <meta
+    name="theme-color"
+    content="#f7e8f2"
+  >
+
+  <title>Una Pregunta</title>
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+</head>
+
+
+<body>
+
+  <main class="app">
+
+
+    <!-- ==================================================
+         ENCABEZADO
+         ================================================== -->
+
+    <header class="topbar">
+
+      <button
+        class="brand"
+        id="brandButton"
+        type="button"
+      >
+        UNA PREGUNTA
+      </button>
+
+      <button
+        class="top-reset"
+        id="topReset"
+        type="button"
+      >
+        NUEVA PREGUNTA
+      </button>
+
+    </header>
+
+
+    <!-- ==================================================
+         PANTALLA 1 — PREGUNTA
+         ================================================== -->
+
+    <section
+      class="screen screen-home is-active"
+      id="home"
+    >
+
+      <div class="doodle doodle-star star-one">
+        ✦
+      </div>
+
+      <div class="doodle doodle-star star-two">
+        ✧
+      </div>
+
+      <div class="doodle doodle-heart heart-one">
+        ♡
+      </div>
+
+      <div class="doodle doodle-dot dot-one">
+        •
+      </div>
+
+
+      <div class="home-content">
+
+        <p class="eyebrow">
+          Una pausa. Una pregunta.
+        </p>
+
+
+        <h1>
+          Pensá una pregunta
+        </h1>
+
+
+        <p class="lead">
+          No hace falta escribirla...
+          <br>
+          Solo tenela en mente
+        </p>
+
+
+        <button
+          class="reveal-button"
+          id="revealButton"
+          type="button"
+        >
+          REVELAR
+        </button>
+
+
+        <p class="microcopy">
+          Una experiencia gratuita.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PANTALLA 2 — RESPUESTA
+         ================================================== -->
+
+    <section
+      class="screen screen-answer"
+      id="answer"
+      aria-live="polite"
+    >
+
+      <div class="answer-content">
+
+
+        <div
+          class="thinking"
+          id="thinking"
+        >
+
+          <p id="thinkingText">
+            Buscando una respuesta
+          </p>
+
+          <div
+            class="dots"
+            id="dots"
+          >
+            · · ·
+          </div>
+
+        </div>
+
+
+        <div
+          class="answer-result"
+          id="answerResult"
+          hidden
+        >
+
+          <p class="answer-label">
+            ✦ Tu respuesta ✦
+          </p>
+
+
+          <div class="answer-circle">
+
+            <h2 id="answerText">
+              SÍ
+            </h2>
+
+          </div>
+
+
+          <p class="answer-note">
+            Tomala como una posibilidad.
+          </p>
+
+
+          <!-- INVITACIÓN DISCRETA AL ORÁCULO -->
+
+          <button
+            class="oracle-invitation"
+            id="oracleInvitation"
+            type="button"
+          >
+
+            <span class="invitation-star">
+              ✦
+            </span>
+
+            <span>
+              ¿Querés ir un poco más allá?
+            </span>
+
+            <small>
+              Podés recibir un mensaje del oráculo
+            </small>
+
+            <span class="invitation-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <button
+            class="again-button"
+            id="answerAgain"
+            type="button"
+          >
+            HACER OTRA PREGUNTA
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PANTALLA 3 — ORÁCULO
+         ================================================== -->
+
+    <section
+      class="screen screen-oracle"
+      id="oracle"
+    >
+
+      <div class="oracle-content">
+
+
+        <button
+          class="back-button"
+          id="backToAnswer"
+          type="button"
+        >
+          ← Volver a mi respuesta
+        </button>
+
+
+        <p class="eyebrow">
+          El oráculo
+        </p>
+
+
+        <h2>
+          Una respuesta puede abrir otra pregunta.
+        </h2>
+
+
+        <p class="oracle-main-text">
+          Si querés profundizar en eso que preguntaste,
+          podés recibir un mensaje más completo del oráculo.
+        </p>
+
+
+        <div class="oracle-card">
+
+
+          <p class="oracle-card-title">
+            MENSAJE DEL ORÁCULO
+          </p>
+
+
+          <p>
+            Este mensaje se realiza mediante un
+            <strong>intercambio voluntario</strong>.
+          </p>
+
+
+          <p>
+            Vos elegís cuánto aportar por tu mensaje.
+          </p>
+
+
+          <p class="oracle-highlight">
+            Una forma de poner en movimiento la energía
+            de dar y recibir:
+            <strong>
+              todo lo que das, vuelve multiplicado.
+            </strong>
+          </p>
+
+
+          <!-- PAGOS -->
+
+          <div class="payment-grid">
+
+
+            <a
+              class="payment-card"
+              id="mercadoPagoLink"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span>
+                Argentina
+              </span>
+
+              <strong>
+                Mercado Pago
+              </strong>
+
+              <small>
+                Elegí tu aporte
+              </small>
+
+            </a>
+
+
+            <a
+              class="payment-card"
+              id="paypalLink"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span>
+                Internacional
+              </span>
+
+              <strong>
+                PayPal
+              </strong>
+
+              <small>
+                Elegí tu aporte
+              </small>
+
+            </a>
+
+
+          </div>
+
+
+          <!-- FORMULARIO -->
+
+          <div class="after-payment">
+
+            <div class="divider">
+              <span>
+                después del intercambio
+              </span>
+            </div>
+
+
+            <p>
+              Una vez realizado el aporte,
+              completá el formulario para recibir
+              tu mensaje.
+            </p>
+
+
+            <a
+              class="form-button"
+              id="oracleFormLink"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              COMPLETAR FORMULARIO
+            </a>
+
+          </div>
+
+
+        </div>
+
+
+        <button
+          class="again-button"
+          id="oracleAgain"
+          type="button"
+        >
+          HACER OTRA PREGUNTA
+        </button>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PIE
+         ================================================== -->
+
+    <footer class="footer">
+
+      <span>
+        © <span id="year"></span> Una Pregunta
+      </span>
+
+      <span>
+        Experiencia gratuita
+      </span>
+
+    </footer>
+
+
+  </main>
+
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
